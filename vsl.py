@@ -25,8 +25,8 @@ if __name__ == "__main__":
         height = int(img.shape[0] * scale_percent / 100)
         dim = (width, height)
 
-        resized = cv2.resize(frame1, dim, interpolation = cv2.INTER_AREA)
-        resized = cv2.resize(frame2, dim, interpolation = cv2.INTER_AREA)
+        frame1 = cv2.resize(frame1, dim, interpolation = cv2.INTER_AREA)
+        frame2 = cv2.resize(frame2, dim, interpolation = cv2.INTER_AREA)
 
         img[1060:1060+width,50:50+height] = frame2[0:width,0:height]
         img[1060:1060+width,100+height:100+height*2] = frame1[0:width,0:height]

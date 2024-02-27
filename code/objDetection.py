@@ -52,6 +52,7 @@ if __name__ == '__main__':
 
     while (True):
         ret,frame=cap.read()
+        print('reading')
         cv2.imwrite("temp/frame.jpg",frame)
         #cv2.imshow("a",frame)
         image = mp.Image.create_from_file("temp/frame.jpg")
